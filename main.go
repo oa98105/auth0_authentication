@@ -44,8 +44,7 @@ func main() {
 
 func authMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		secret := []byte("xc5Keu8vpj35ctc342VuEc5IPZctXMXN")
-		//secret := []byte("lI8wkKIQzjduEv0ep9P7QHvvMwyB0JrzzXSVi7GRMw1uuvCFbSWXyYXb4RwddRaD")
+		secret := []byte("siging secret from API i created for which audience is as below")
 		secretProvider := auth0.NewKeyProvider(secret)
 		audience := []string{"discvr"}
 
